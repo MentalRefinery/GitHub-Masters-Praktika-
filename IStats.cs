@@ -8,5 +8,11 @@ namespace GitHub_Masters__Praktika_
 {
     interface IStats
     {
+        ///Charakteristikos
+        ///Jėga
+        ///Puolimo Greitis
+        /// (Kuo daugiau pasiūlysit tuo bus smagiau)
+
+
     }
 }
