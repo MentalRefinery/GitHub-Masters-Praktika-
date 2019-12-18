@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace GitHub_Masters__Praktika_
 {
-    class Rogue : IHero, IStats
+    class Rogue : IHero
     {
+        
     }
 }
