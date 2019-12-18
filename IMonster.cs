@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace GitHub_Masters__Praktika_
 {
-    interface IMonster
+    interface IMonster : IStats
     {
         ///Galimi Padarų metodai ???
+        ///
+        void Attack();
 
     }
 }
