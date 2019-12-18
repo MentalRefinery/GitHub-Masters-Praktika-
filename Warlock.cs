@@ -13,5 +13,10 @@ namespace GitHub_Masters__Praktika_
         public int Health { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int Strength { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int Dexterity { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public void GetDamage(int dmg)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

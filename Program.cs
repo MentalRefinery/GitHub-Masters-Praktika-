@@ -10,21 +10,44 @@ namespace GitHub_Masters__Praktika_
     {
         private static void Main(string[] args)
         {
-            ///Mūsų pagrindinė klasė
-            ///
-            Console.WriteLine(UserInput("Hello Adventurer! What is your name?"));
-            string name = Console.ReadLine();
+            HiAdventurer("Hello Adventurer, What is your Name?");
+            PlayOrNot("Would you like to play?");
+
+            //Patikrinimui ar tesiam nuotyki.
+            Console.WriteLine("Adventure begins");
+            Console.ReadLine();
         }
-
-        //Įvesties metodas
-        private static string UserInput(string input)
+        private static void HiAdventurer(string greeting)
         {
-            //String Interpolation
-            Console.WriteLine($"{input}");
-            ///Galėtų būti ir
-            ///Console.WriteLine("{0}", input);
+            Console.WriteLine(greeting);
+            string adventurerName = Console.ReadLine();
+            Console.WriteLine($"Hello {adventurerName}.");
 
-            return Console.ReadLine(); // Kam to reikia?????
+        }
+        private static void PlayOrNot(string question)
+        {
+            Console.WriteLine($"{question} Y / N?");
+            var answer = Convert.ToChar(Console.ReadLine());
+            switch (answer)
+            {
+                case 'Y':
+                    break;
+                case 'y':
+                    break;
+                case 'n':
+                    ProgramExit();
+                    break;
+                case 'N':
+                    ProgramExit();
+                    break;
+                default:
+                    PlayOrNot("You type something wrong, Would you like to continue?");
+                    break;
+            }
+        }
+        private static void ProgramExit()
+        {
+            Environment.Exit(0);
         }
     }
 }
