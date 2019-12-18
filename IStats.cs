@@ -8,10 +8,15 @@ namespace GitHub_Masters__Praktika_
 {
     interface IStats
     {
-        ///Charakteristikos
-        ///Jėga
-        ///Puolimo Greitis
-        /// (Kuo daugiau pasiūlysit tuo bus smagiau)
+        ///Visos galimos Herojaus ir padarų Charakteristikos.
+        
+        //Gyvybės
+        int Health {get;set;}
+        //Jėga
+        int Strength {get;set;}
+        //Vikrumas
+        int Dexterity{get;set;}
+
 
 
     }

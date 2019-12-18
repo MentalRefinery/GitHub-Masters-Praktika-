@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GitHub_Masters__Praktika_
 {
-    class Warlock
+    class Warlock : IHero, IStats
     {
     }
 }

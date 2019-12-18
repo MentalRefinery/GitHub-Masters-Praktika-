@@ -8,5 +8,7 @@ namespace GitHub_Masters__Praktika_
 {
     interface IMonster
     {
+        ///Galimi Padarų metodai ???
+
     }
 }
