@@ -8,12 +8,27 @@ namespace GitHub_Masters__Praktika_
 {
     internal class Monster : IMonster
     {
-        //Still in development
-        public int Health { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        //Stats
+        public int Health { get; set; }
+        public int ChanceToDodge { get; set; }
+        public int MinimumDamage { get; set; }
+        public int MaximumDamage { get; set; }
 
-        public int Strength { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Dexterity { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        //Attributes
+        public int Strength { get; set; }
+        public int Dexterity { get; set; }
+        public int Constitution { get; set; }
+        public int Luck { get; set; }
+        public int Mastery { get; set; }
 
+
+        public void AssignHeroStats()
+        {           
+        }       
+
+        public void GetDamage(int dmg)
+        {            
+        }
         public void Attack(IHero hero)
         {
             hero.GetDamage(RandomDamage());
@@ -22,7 +37,7 @@ namespace GitHub_Masters__Praktika_
         private int RandomDamage()
         {
             Random rng = new Random();
-            return rng.Next();
+            return rng.Next(MinimumDamage, MaximumDamage);
         }
     }
 }
