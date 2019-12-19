@@ -8,14 +8,29 @@ namespace GitHub_Masters__Praktika_
 {
     internal interface IHero : IStats
     {
-        ///Herojaus metodai kaip
-        ///Puolimas, Specialios atakos ir t.t.
+        
+        
         ///Herojaus Lygis, Konvertavę Herojaus patirtį į Int galime gauti Herojaus lygį, +1 nes Herojus pradeda nuo lvl 1.
         int HeroLevel { get; set; }
 
         //Herojaus patirtis
         double HeroExperience { get; set; }
 
+        ///Herojaus Spec atakos (Skills)
+        ///Heavy Attack, Light Atack, Skill, Ultimate
+        double HeavyAtack { get; set; }
+        double LightAttack { get; set; }
+        double Skill { get; set; }
+        double UltimateSkill { get; set; }
+
+        ///Herojaus metodai kaip Puolimas, Specialios atakos ir t.t.
         void GetDamage(int dmg);
+        void _HeavyAtack(IMonster monster);
+        void _LightAtack(IMonster monster);
+        void _Skill(IMonster monster);
+        void Ultimate(IMonster monster);
+
+        void Leveling(int heroLVL);
+
     }
 }
