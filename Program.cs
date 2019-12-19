@@ -46,6 +46,7 @@ namespace GitHub_Masters__Praktika_
                     break;
             }
         }
+
         private static void ProgramExit()
         {
             Environment.Exit(0);
