@@ -11,6 +11,5 @@ namespace GitHub_Masters__Praktika_
         ///Galimi Padarų metodai ???
         ///
         void Attack(IHero hero);
-        void GetDamage(int dmg);
     }
 }

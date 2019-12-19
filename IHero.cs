@@ -25,11 +25,9 @@ namespace GitHub_Masters__Praktika_
 
         ///Herojaus metodai kaip Puolimas, Specialios atakos ir t.t.
         void GetDamage(int dmg);
-        void HeavyAtackMethod(IMonster monster);
-        void LightAtackMethod(IMonster monster);
-
-        //Kiekviena klase tures specifini skilla.
-        void SpecialSkill(IMonster monster);
+        void _HeavyAtack(IMonster monster);
+        void _LightAtack(IMonster monster);
+        void _Skill(IMonster monster);
         void Ultimate(IMonster monster);
 
         void Leveling(int heroLVL);
