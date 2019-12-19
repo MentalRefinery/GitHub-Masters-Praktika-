@@ -17,13 +17,14 @@ namespace GitHub_Masters__Praktika_
             Console.WriteLine("Adventure begins");
             Console.ReadLine();
         }
+
         private static void HiAdventurer(string greeting)
         {
             Console.WriteLine(greeting);
             string adventurerName = Console.ReadLine();
             Console.WriteLine($"Hello {adventurerName}.");
-
         }
+
         private static void PlayOrNot(string question)
         {
             Console.WriteLine($"{question} Y / N?");
