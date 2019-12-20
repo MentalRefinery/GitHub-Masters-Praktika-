@@ -9,7 +9,8 @@ namespace GitHub_Masters__Praktika_
     internal class Monster : IMonster
     {
         //Stats
-        public int Health { get; set; }
+        public int MaximumHealth { get; set; }
+        public int CurrentHealth { get; set; }
         public int ChanceToDodge { get; set; }
         public int MinimumDamage { get; set; }
         public int MaximumDamage { get; set; }

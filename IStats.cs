@@ -23,7 +23,8 @@ namespace GitHub_Masters__Praktika_
 
 
         //Stats        
-        int Health { get; set; }
+        int MaximumHealth { get; set; }
+        int CurrentHealth { get; set; }
         int ChanceToDodge { get; set; } // %
         int MinimumDamage { get; set; }
         int MaximumDamage { get; set; }

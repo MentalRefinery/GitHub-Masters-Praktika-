@@ -10,7 +10,8 @@ namespace GitHub_Masters__Praktika_
     {
         public int HeroLevel { get; set; }
         public double HeroExperience { get; set; }
-        public int Health { get; set; }
+        public int MaximumHealth { get; set; }
+        public int CurrentHealth { get; set; }
         public double HeavyAtack { get; set; }
         public double LightAttack { get; set; }
         public double Skill { get; set; }
@@ -39,12 +40,30 @@ namespace GitHub_Masters__Praktika_
 
         public void GetDamage(int dmg)
         {            
-        }        
-
-        public void Leveling(int heroLVL)
-        {            
         }
-        
+
+        public void Leveling(IHero hero)
+        {
+            if (hero.HeroExperience < 100)
+            {
+                hero.HeroLevel = 1;
+            }
+            else if (hero.HeroExperience < 200)
+            {
+                hero.HeroLevel = 2;
+            }
+            else if (hero.HeroExperience < 400)
+            {
+                hero.HeroLevel = 3;
+            }
+            else if (hero.HeroExperience < 700)
+            {
+                hero.HeroLevel = 4;
+
+                //Current Maximum Level
+            }
+        }
+
         private int RandomDamage()
         {
             Random rng = new Random();

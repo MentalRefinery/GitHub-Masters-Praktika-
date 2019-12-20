@@ -32,7 +32,7 @@ namespace GitHub_Masters__Praktika_
         void SpecialSkill(IMonster monster);
         void Ultimate(IMonster monster);
 
-        void Leveling(int heroLVL);
+        void Leveling(IHero hero);
 
     }
 }
