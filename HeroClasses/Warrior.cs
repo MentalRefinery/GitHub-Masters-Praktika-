@@ -9,14 +9,14 @@ namespace GitHub_Masters__Praktika_
     class Warrior : IHero
     {
         //Stats
-        public int HeroLevel { get ; set; }
-        public double HeroExperience { get; set; }
+        public int HeroLevel { get; set; }
+        public int HeroExperience { get; set; }
         public int MaximumHealth { get; set; }
         public int CurrentHealth { get; set; }
         public double HeavyAtack { get; set; }
         public double LightAttack { get; set; }
         public double Skill { get; set; }
-        public double UltimateSkill { get; set; }               
+        public double UltimateSkill { get; set; }
         public int ChanceToDodge { get; set; }
         public int MinimumDamage { get; set; }
         public int MaximumDamage { get; set; }
@@ -36,32 +36,36 @@ namespace GitHub_Masters__Praktika_
         public int Mastery { get; set; }
 
         public void AssignStats()
-        {            
+        {
         }
 
         public void GetDamage(int dmg)
-        {            
+        {
         }
 
-        public void Leveling(IHero hero)
+        public int Leveling(int exp)
         {
-            if (hero.HeroExperience < 100)
+            if (exp < 100)
             {
-                hero.HeroLevel = 1;
+                return HeroLevel = 1;
             }
-            else if (hero.HeroExperience < 200)
+            else if (exp < 200)
             {
-                hero.HeroLevel = 2;
+                return HeroLevel = 2;
             }
-            else if (hero.HeroExperience < 400)
+            else if (exp < 400)
             {
-                hero.HeroLevel = 3;
+                return HeroLevel = 3;
             }
-            else if (hero.HeroExperience < 700)
+            else if (exp < 700)
             {
-                hero.HeroLevel = 4;
+                return HeroLevel = 4;
 
                 //Current Maximum Level
+            }
+            else
+            {
+                return HeroLevel;
             }
         }
 
@@ -73,7 +77,7 @@ namespace GitHub_Masters__Praktika_
 
         //Attack types        
         public void Ultimate(IMonster monster)
-        {            
+        {
         }
         public void SpecialSkill(IMonster monster)
         {
@@ -81,13 +85,25 @@ namespace GitHub_Masters__Praktika_
         public void HeavyAtackMethod(IMonster monster)
         {
             monster.GetDamage(RandomDamage() + (RandomDamage() / 2));
+            if (monster.CurrentHealth <= 0)
+            {
+
+                monster.DropSomething();
+                GetExperience(monster);
+                Leveling(HeroExperience);
+            }
         }
+
         public void LightAtackMethod(IMonster monster)
         {
             {
                 monster.GetDamage(RandomDamage());
             }
 
+        }
+        private int GetExperience(IMonster monster)
+        {
+            return HeroExperience += monster.ExpWorth;
         }
     }
 }

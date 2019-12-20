@@ -14,7 +14,7 @@ namespace GitHub_Masters__Praktika_
         int HeroLevel { get; set; }
 
         //Herojaus patirtis
-        double HeroExperience { get; set; }
+        int HeroExperience { get; set; }
 
         ///Herojaus Spec atakos (Skills)
         ///Heavy Attack, Light Atack, Skill, Ultimate
@@ -32,7 +32,8 @@ namespace GitHub_Masters__Praktika_
         void SpecialSkill(IMonster monster);
         void Ultimate(IMonster monster);
 
-        void Leveling(IHero hero);
+        int Leveling(int exp);
+        
 
     }
 }

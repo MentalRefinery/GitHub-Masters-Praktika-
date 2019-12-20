@@ -10,6 +10,7 @@ namespace GitHub_Masters__Praktika_
     {
         ///Galimi Padarų metodai ???
         ///
+        int ExpWorth { get; set; }
         void Attack(IHero hero);
         void GetDamage(int dmg);
 
@@ -21,6 +22,6 @@ namespace GitHub_Masters__Praktika_
 
         void DropSomething();
 
-        void GiveExperience();
+        
     }
 }

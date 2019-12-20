@@ -9,6 +9,7 @@ namespace GitHub_Masters__Praktika_
     internal class Monster : IMonster
     {
         //Stats
+        public int ExpWorth { get; set; }
         public int MaximumHealth { get; set; }
         public int CurrentHealth { get; set; }
         public int ChanceToDodge { get; set; }
@@ -56,8 +57,6 @@ namespace GitHub_Masters__Praktika_
         {            
         }
 
-        public void GiveExperience()
-        {            
-        }
+        
     }
 }
