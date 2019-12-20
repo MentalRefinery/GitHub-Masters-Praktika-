@@ -32,7 +32,7 @@ namespace GitHub_Masters__Praktika_
 
         //Methods
         //Nuskaityt Atributu reiksmes ir atitinkamai paverst jas i stats
-        void AssignHeroStats();
+        void AssignStats();
 
 
     }

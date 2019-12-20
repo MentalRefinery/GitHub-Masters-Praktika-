@@ -28,7 +28,7 @@ namespace GitHub_Masters__Praktika_
         public int Luck { get; set; }
         public int Mastery { get; set; }
 
-        public void AssignHeroStats()
+        public void AssignStats()
         {           
         }
 

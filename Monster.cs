@@ -22,7 +22,7 @@ namespace GitHub_Masters__Praktika_
         public int Mastery { get; set; }
 
 
-        public void AssignHeroStats()
+        public void AssignStats()
         {           
         }       
 
