@@ -83,17 +83,39 @@ namespace GitHub_Masters__Praktika_
         {
             monster.GetDamage(RandomDamage());
             monster.GetDamage(RandomDamage());
+            if (monster.CurrentHealth <= 0)
+            {
+                monster.DropSomething();
+                GetExperience(monster);
+                Leveling(HeroExperience);
+            }
         }
         public void HeavyAtackMethod(IMonster monster)
         {
             monster.GetDamage(RandomDamage() + (RandomDamage() / 2));
+            if (monster.CurrentHealth <= 0)
+            {
+                monster.DropSomething();
+                GetExperience(monster);
+                Leveling(HeroExperience);
+            }
         }
         public void LightAtackMethod(IMonster monster)
         {
             {
                 monster.GetDamage(RandomDamage());
+                if (monster.CurrentHealth <= 0)
+                {
+                    monster.DropSomething();
+                    GetExperience(monster);
+                    Leveling(HeroExperience);
+                }
             }
 
+        }
+        private int GetExperience(IMonster monster)
+        {
+            return HeroExperience += monster.ExpWorth;
         }
 
     }

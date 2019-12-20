@@ -80,9 +80,11 @@ namespace GitHub_Masters__Praktika_
         public void Ultimate(IMonster monster)
         {
         }
+
         public void SpecialSkill(IMonster monster)
         {
         }
+
         public void HeavyAtackMethod(IMonster monster)
         {
             monster.GetDamage(RandomDamage() + (RandomDamage() / 2));
@@ -92,7 +94,6 @@ namespace GitHub_Masters__Praktika_
                 monster.DropSomething();
                 GetExperience(monster);
                 Leveling(HeroExperience);
-
             }
         }       
 
@@ -100,6 +101,13 @@ namespace GitHub_Masters__Praktika_
         {
             {
                 monster.GetDamage(RandomDamage());
+                if (monster.CurrentHealth <= 0)
+                {
+
+                    monster.DropSomething();
+                    GetExperience(monster);
+                    Leveling(HeroExperience);
+                }
             }
 
         }

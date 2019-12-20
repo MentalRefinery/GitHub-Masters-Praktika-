@@ -79,15 +79,22 @@ namespace GitHub_Masters__Praktika_
         public void Ultimate(IMonster monster)
         {
         }
-        public void SpecialSkill(IMonster monster)
+        public void SpecialSkill(IMonster monster)//Puola ir pasigydo 10% savo maximum health
         {
+            monster.GetDamage(RandomDamage());
+            CurrentHealth += MaximumHealth / 10;
+            if (monster.CurrentHealth <= 0)
+            {
+                monster.DropSomething();
+                GetExperience(monster);
+                Leveling(HeroExperience);
+            }
         }
         public void HeavyAtackMethod(IMonster monster)
         {
             monster.GetDamage(RandomDamage() + (RandomDamage() / 2));
             if (monster.CurrentHealth <= 0)
             {
-
                 monster.DropSomething();
                 GetExperience(monster);
                 Leveling(HeroExperience);
@@ -98,6 +105,12 @@ namespace GitHub_Masters__Praktika_
         {
             {
                 monster.GetDamage(RandomDamage());
+                if (monster.CurrentHealth <= 0)
+                {
+                    monster.DropSomething();
+                    GetExperience(monster);
+                    Leveling(HeroExperience);
+                }
             }
 
         }

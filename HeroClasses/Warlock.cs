@@ -80,6 +80,11 @@ namespace GitHub_Masters__Praktika_
         }
         public void SpecialSkill(IMonster monster)
         {
+            monster.GetDamage(RandomDamage() * 2);//Stipri Ataka, bet 10% savo esamu gyvybiu.
+            CurrentHealth -= CurrentHealth / 10;
+            monster.DropSomething();
+            GetExperience(monster);
+            Leveling(HeroExperience);
         }
         public void HeavyAtackMethod(IMonster monster)
         {
@@ -98,6 +103,12 @@ namespace GitHub_Masters__Praktika_
         {
             {
                 monster.GetDamage(RandomDamage());
+                if (monster.CurrentHealth <= 0)
+                {
+                    monster.DropSomething();
+                    GetExperience(monster);
+                    Leveling(HeroExperience);
+                }
             }
 
         }
