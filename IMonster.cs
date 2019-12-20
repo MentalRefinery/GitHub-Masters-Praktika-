@@ -12,5 +12,11 @@ namespace GitHub_Masters__Praktika_
         ///
         void Attack(IHero hero);
         void GetDamage(int dmg);
+
+
+        //Could be like DoT attack = Damage over time
+        //poison or burn
+        //maybe use Thread.Sleep(miliseconds)
+        void SpecialAttack();
     }
 }
