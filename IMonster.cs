@@ -10,7 +10,7 @@ namespace GitHub_Masters__Praktika_
     {
         ///Galimi Padarų metodai ???
         ///
-        int ExpWorth { get; set; }
+        int ExpWorth { get; set; }//Custom exp prop
         void Attack(IHero hero);
         void GetDamage(int dmg);
 

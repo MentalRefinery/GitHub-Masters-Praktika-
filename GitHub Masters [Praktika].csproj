@@ -44,16 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Items\Armor.cs" />
     <Compile Include="IHero.cs" />
+    <Compile Include="Items\Consumables.cs" />
+    <Compile Include="Items\IItems.cs" />
     <Compile Include="IMonster.cs" />
     <Compile Include="IStats.cs" />
     <Compile Include="HeroClasses\Mage.cs" />
+    <Compile Include="Items\Jewelry.cs" />
     <Compile Include="Monster.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HeroClasses\Rogue.cs" />
     <Compile Include="HeroClasses\Warlock.cs" />
     <Compile Include="HeroClasses\Warrior.cs" />
+    <Compile Include="Items\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

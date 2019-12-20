@@ -22,8 +22,8 @@ namespace GitHub_Masters__Praktika_
         int Mastery { get; set; }//Increase damage or increase chance to hit ??
 
 
-        //Stats        
-        int MaximumHealth { get; set; }
+        //Stats                
+        int MaximumHealth { get; set; }//Pridejom nes mum reikes turet sia prop kad Monster ar Hero nesihealintu iki milijono hp
         int CurrentHealth { get; set; }
         int ChanceToDodge { get; set; } // %
         int MinimumDamage { get; set; }
@@ -33,7 +33,7 @@ namespace GitHub_Masters__Praktika_
         int AttackSpeed { get; set; } //Attack per second
         int Accuracy { get; set; } //Chance to hit
         int ArmorPenetration { get; set; }//Ignore some armor
-        int armor { get; set; }//Ignore some damage
+        int Armor { get; set; }//Ignore some damage
 
 
         //Methods

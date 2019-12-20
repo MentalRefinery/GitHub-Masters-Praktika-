@@ -25,7 +25,7 @@ namespace GitHub_Masters__Praktika_
         public int AttackSpeed { get; set; }
         public int Accuracy { get; set; }
         public int ArmorPenetration { get; set; }
-        public int armor { get; set; }
+        public int Armor { get; set; }
 
 
         //Attributes
