@@ -15,4 +15,5 @@ Pasirašyti savo Username (nickname  will do) ReadMe faile.
 
 
 Contributors:
-<Jūsų Sąrašas>
+Žydrūnas
+Dominykas
