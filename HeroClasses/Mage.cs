@@ -81,6 +81,12 @@ namespace GitHub_Masters__Praktika_
         public void HeavyAtackMethod(IMonster monster)
         {
             monster.GetDamage(RandomDamage() + (RandomDamage() / 2));
+            if (monster.CurrentHealth <= 0)
+            {
+                monster.GiveExperience();
+                monster.DropSomething();
+
+            }
         }
         public void LightAtackMethod(IMonster monster)
         {

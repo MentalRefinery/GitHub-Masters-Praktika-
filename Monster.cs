@@ -51,5 +51,13 @@ namespace GitHub_Masters__Praktika_
         {
 
         }
+
+        public void DropSomething()
+        {            
+        }
+
+        public void GiveExperience()
+        {            
+        }
     }
 }

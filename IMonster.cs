@@ -18,5 +18,9 @@ namespace GitHub_Masters__Praktika_
         //poison or burn
         //maybe use Thread.Sleep(miliseconds)
         void SpecialAttack();
+
+        void DropSomething();
+
+        void GiveExperience();
     }
 }
