@@ -30,7 +30,7 @@ namespace GitHub_Masters__Praktika_
         int MaximumDamage { get; set; }
         int CriticalStrike { get; set; } // %
         int CriticalStrikeDamage { get; set; } //Damage multipleir
-        int AttackSpeed { get; set; } //Attack per second
+        double AttackSpeed { get; set; } //Attack per second
         int Accuracy { get; set; } //Chance to hit
         int ArmorPenetration { get; set; }//Ignore some armor
         int Armor { get; set; }//Ignore some damage

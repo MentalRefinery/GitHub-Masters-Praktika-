@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GitHub_Masters__Praktika_
 {
-    class Rogue : IHero
+    internal class Rogue : IHero
     {
         public int HeroLevel { get; set; }
         public int HeroExperience { get; set; }
@@ -21,7 +21,7 @@ namespace GitHub_Masters__Praktika_
         public int MaximumDamage { get; set; }
         public int CriticalStrike { get; set; }
         public int CriticalStrikeDamage { get; set; }
-        public int AttackSpeed { get; set; }
+        public double AttackSpeed { get; set; }
         public int Accuracy { get; set; }
         public int ArmorPenetration { get; set; }
         public int Armor { get; set; }

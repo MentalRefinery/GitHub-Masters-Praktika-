@@ -4,11 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
+using System.Timers;
 
 namespace GitHub_Masters__Praktika_
 {
     internal class Program
     {
+
+        //Need to work with Timer for attack soon.
+        //private static Timer aTimer; 
         private static void Main(string[] args)
         {
             HiAdventurer("Hello Adventurer, What is your Name?");
@@ -19,11 +23,67 @@ namespace GitHub_Masters__Praktika_
 
             //Wont have to change format if I change the name of classes.
             Question($"Would you like to play { nameof(Mage)}, { nameof(Warrior)}, { nameof(Rogue)} or { nameof(Warlock)}?");
-            ChooseHero();          
-            
-            Console.ReadLine();
-        }
+            string chosen = Console.ReadLine();
+            IHero chosenHero;
 
+            //Formating answer to lower
+            chosen.ToLower();
+            //Changing class name to Title Case.
+            chosen = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(chosen);
+
+            if (chosen == typeof(Mage).Name)
+            {
+                Console.WriteLine("You have chosen a " + chosen);
+                chosenHero = new Mage();
+               
+            }
+            else if (chosen == typeof(Warrior).Name)
+            {
+                Console.WriteLine("You have chosen a " + chosen);
+                chosenHero = new Warrior();
+            }
+            else if (chosen == typeof(Rogue).Name)
+            {
+                Console.WriteLine("You have chosen a " + chosen);
+                chosenHero = new Rogue();
+            }
+            else if (chosen == typeof(Warlock).Name)
+            {
+                Console.WriteLine("You have chosen a " + chosen);
+                chosenHero = new Warlock();
+            }
+            else
+            {
+                Question($"Please try again... \nWould you like to play {nameof(Mage)}, {nameof(Warrior)}, {nameof(Rogue)} or {nameof(Warlock)}?");
+                chosen = Console.ReadLine();
+                
+                if (chosen == typeof(Mage).Name)
+                {
+                    Console.WriteLine("You have chosen a " + chosen);
+                    chosenHero = new Mage();
+
+                }
+                else if (chosen == typeof(Warrior).Name)
+                {
+                    Console.WriteLine("You have chosen a " + chosen);
+                    chosenHero = new Warrior();
+                }
+                else if (chosen == typeof(Rogue).Name)
+                {
+                    Console.WriteLine("You have chosen a " + chosen);
+                    chosenHero = new Rogue();
+                }
+                else if (chosen == typeof(Warlock).Name)
+                {
+                    Console.WriteLine("You have chosen a " + chosen);
+                    chosenHero = new Warlock();
+                }
+            }                        
+            
+
+            Console.ReadLine();
+        }      
+        
         private static void HiAdventurer(string greeting)
         {
             Console.WriteLine(greeting);
@@ -57,41 +117,7 @@ namespace GitHub_Masters__Praktika_
             //Need to fiddle with delegates soon.
             Console.WriteLine(txt);
         }
-        private static void ChooseHero()
-        {
-            string answer = Console.ReadLine();
-
-            //Formating answer to lower
-            answer.ToLower();
-            //Changing class name to Title Case.
-            answer = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(answer);
-            
-            if (answer == typeof(Mage).Name)
-            {                
-                Console.WriteLine("You have chosen a " + answer);                
-                Mage chosenHero = new Mage();
-            }
-            else if (answer == typeof(Warrior).Name)
-            {               
-                Console.WriteLine("You have chosen a " + answer);               
-                Warrior chosenHero = new Warrior();
-            }
-            else if (answer == typeof(Rogue).Name)
-            {                
-                Console.WriteLine("You have chosen a " + answer);                
-                Rogue chosenHero = new Rogue();
-            }
-            else if (answer == typeof(Warlock).Name)
-            {                
-                Console.WriteLine("You have chosen a " + answer);                
-                Warlock chosenHero = new Warlock();
-            }
-            else
-            {
-                Question($"Please try again... \nWould you like to play {nameof(Mage)}, {nameof(Warrior)}, {nameof(Rogue)} or {nameof(Warlock)}?");
-            }                       
-        }
-
+       
         //Exit method, security reasons, so I am used to call Exit method if I want to terminate my program.
         private static void ProgramExit()
         {

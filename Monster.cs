@@ -11,13 +11,13 @@ namespace GitHub_Masters__Praktika_
         //Stats
         public int ExpWorth { get; set; }
         public int MaximumHealth { get; set; }
-        public int CurrentHealth { get; set; }
+        public int CurrentHealth { get; set; } = 50; //testing
         public int ChanceToDodge { get; set; }
-        public int MinimumDamage { get; set; }
-        public int MaximumDamage { get; set; }
+        public int MinimumDamage { get; set; } = 1; //testing
+        public int MaximumDamage { get; set; } = 2; //testing
         public int CriticalStrike { get; set; }
         public int CriticalStrikeDamage { get; set; }
-        public int AttackSpeed { get; set; }
+        public double AttackSpeed { get; set; } = 1.2; //testing
         public int Accuracy { get; set; }
         public int ArmorPenetration { get; set; }
         public int Armor { get; set; }

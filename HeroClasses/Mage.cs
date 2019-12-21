@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace GitHub_Masters__Praktika_
 {
-    class Mage : IHero
+    internal class Mage : IHero
     {
         public int HeroLevel { get; set; }
         public int HeroExperience { get; set; }
         public int MaximumHealth { get; set; }
-        public int CurrentHealth { get; set; }
+        public int CurrentHealth { get; set; } = 50; //testing
         public double HeavyAtack { get; set; }
         public double LightAttack { get; set; }
         public double Skill { get; set; }
         public double UltimateSkill { get; set; }        
         public int ChanceToDodge { get; set; }
-        public int MinimumDamage { get; set; }
-        public int MaximumDamage { get; set; }
+        public int MinimumDamage { get; set; } = 1; //testing
+        public int MaximumDamage { get; set; } = 2; //testing
         public int CriticalStrike { get; set; }
         public int CriticalStrikeDamage { get; set; }
-        public int AttackSpeed { get; set; }
+        public double AttackSpeed { get; set; }
         public int Accuracy { get; set; }
         public int ArmorPenetration { get; set; }
         public int Armor { get; set; }
