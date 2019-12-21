@@ -19,7 +19,7 @@ namespace GitHub_Masters__Praktika_
         ///Herojaus Spec atakos (Skills)
         ///Heavy Attack, Light Atack, Skill, Ultimate
         double HeavyAtack { get; set; }
-        double LightAttack { get; set; }
+        double LightAttack { get; set; }// Could it be attribute damage? O.o ++ Resistances
         double Skill { get; set; }
         double UltimateSkill { get; set; }
 
