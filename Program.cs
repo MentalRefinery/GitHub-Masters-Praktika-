@@ -26,62 +26,73 @@ namespace GitHub_Masters__Praktika_
             string chosen = Console.ReadLine();
             IHero chosenHero;
 
-            //Formating answer to lower
-            chosen.ToLower();
-            //Changing class name to Title Case.
-            chosen = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(chosen);
+           //for loopas veikia neblogai, tik tiek kad reikia dviguba enter paspausti kad toliau eitu
+           
 
-            if (chosen == typeof(Mage).Name)
+
+            for (int i = 0; i < 100; i++)
             {
-                Console.WriteLine("You have chosen a " + chosen);
-                chosenHero = new Mage();
-               
-            }
-            else if (chosen == typeof(Warrior).Name)
-            {
-                Console.WriteLine("You have chosen a " + chosen);
-                chosenHero = new Warrior();
-            }
-            else if (chosen == typeof(Rogue).Name)
-            {
-                Console.WriteLine("You have chosen a " + chosen);
-                chosenHero = new Rogue();
-            }
-            else if (chosen == typeof(Warlock).Name)
-            {
-                Console.WriteLine("You have chosen a " + chosen);
-                chosenHero = new Warlock();
-            }
-            else
-            {
-                Question($"Please try again... \nWould you like to play {nameof(Mage)}, {nameof(Warrior)}, {nameof(Rogue)} or {nameof(Warlock)}?");
-                chosen = Console.ReadLine();
-                
+                //Formating answer to lower
+                chosen.ToLower();
+                //Changing class name to Title Case.
+                chosen = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(chosen);
+
                 if (chosen == typeof(Mage).Name)
                 {
                     Console.WriteLine("You have chosen a " + chosen);
                     chosenHero = new Mage();
-
+                    break;
                 }
                 else if (chosen == typeof(Warrior).Name)
                 {
                     Console.WriteLine("You have chosen a " + chosen);
                     chosenHero = new Warrior();
+                    break;
                 }
                 else if (chosen == typeof(Rogue).Name)
                 {
                     Console.WriteLine("You have chosen a " + chosen);
                     chosenHero = new Rogue();
+                    break;
                 }
                 else if (chosen == typeof(Warlock).Name)
                 {
                     Console.WriteLine("You have chosen a " + chosen);
                     chosenHero = new Warlock();
+                    break;
                 }
-            }                        
-            
+                else
+                {
+                    Question($"Please try again... \nWould you like to play {nameof(Mage)}, {nameof(Warrior)}, {nameof(Rogue)} or {nameof(Warlock)}?");
+                    chosen = Console.ReadLine();
 
-            Console.ReadLine();
+                   /* if (chosen == typeof(Mage).Name)
+                    {
+                        Console.WriteLine("You have chosen a " + chosen);
+                        chosenHero = new Mage();
+
+                    }
+                    else if (chosen == typeof(Warrior).Name)
+                    {
+                        Console.WriteLine("You have chosen a " + chosen);
+                        chosenHero = new Warrior();
+                    }
+                    else if (chosen == typeof(Rogue).Name)
+                    {
+                        Console.WriteLine("You have chosen a " + chosen);
+                        chosenHero = new Rogue();
+                    }
+                    else if (chosen == typeof(Warlock).Name)
+                    {
+                        Console.WriteLine("You have chosen a " + chosen);
+                        chosenHero = new Warlock();
+                    }*/
+                }
+
+
+                Console.ReadLine();
+            }
+           
         }      
         
         private static void HiAdventurer(string greeting)
