@@ -24,19 +24,12 @@ namespace GitHub_Masters__Praktika_
             //Wont have to change format if I change the name of classes.
             Question($"Would you like to play { nameof(Mage)}, { nameof(Warrior)}, { nameof(Rogue)} or { nameof(Warlock)}?");
             string chosen = Console.ReadLine();
-            IHero chosenHero;
-
-           //for loopas veikia neblogai, tik tiek kad reikia dviguba enter paspausti kad toliau eitu
-           
-
+            IHero chosenHero;           
+            FormatAnswer(chosen);
 
             for (int i = 0; i < 100; i++)
             {
-                //Formating answer to lower
-                chosen.ToLower();
-                //Changing class name to Title Case.
-                chosen = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(chosen);
-
+                
                 if (chosen == typeof(Mage).Name)
                 {
                     Console.WriteLine("You have chosen a " + chosen);
@@ -65,36 +58,22 @@ namespace GitHub_Masters__Praktika_
                 {
                     Question($"Please try again... \nWould you like to play {nameof(Mage)}, {nameof(Warrior)}, {nameof(Rogue)} or {nameof(Warlock)}?");
                     chosen = Console.ReadLine();
-
-                   /* if (chosen == typeof(Mage).Name)
-                    {
-                        Console.WriteLine("You have chosen a " + chosen);
-                        chosenHero = new Mage();
-
-                    }
-                    else if (chosen == typeof(Warrior).Name)
-                    {
-                        Console.WriteLine("You have chosen a " + chosen);
-                        chosenHero = new Warrior();
-                    }
-                    else if (chosen == typeof(Rogue).Name)
-                    {
-                        Console.WriteLine("You have chosen a " + chosen);
-                        chosenHero = new Rogue();
-                    }
-                    else if (chosen == typeof(Warlock).Name)
-                    {
-                        Console.WriteLine("You have chosen a " + chosen);
-                        chosenHero = new Warlock();
-                    }*/
-                }
-
-
-                Console.ReadLine();
+                    FormatAnswer(chosen);              
+                }               
             }
-           
-        }      
+
+            //No more double enter FIXED
+            Console.ReadLine();
+        }  
         
+        private static void FormatAnswer(string txt)
+        {
+            //Formating answer to lower
+            txt.ToLower();
+            //Changing class name to Title Case.
+            txt = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txt);
+
+        }
         private static void HiAdventurer(string greeting)
         {
             Console.WriteLine(greeting);
