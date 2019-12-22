@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace GitHub_Masters__Praktika_
 {
@@ -21,7 +22,7 @@ namespace GitHub_Masters__Praktika_
         public int MaximumDamage { get; set; } = 2; //testing
         public int CriticalStrike { get; set; }
         public int CriticalStrikeDamage { get; set; }
-        public double AttackSpeed { get; set; }
+        public double AttackSpeed { get; set; } = 2;
         public int Accuracy { get; set; }
         public int ArmorPenetration { get; set; }
         public int Armor { get; set; }
@@ -40,7 +41,17 @@ namespace GitHub_Masters__Praktika_
         }
 
         public void GetDamage(int dmg)
-        {            
+        {
+            CurrentHealth -= dmg;
+            if (CurrentHealth <= 0)
+            {
+                Console.WriteLine("You died");
+            }
+            else
+            {
+                Console.WriteLine($"You got hit for {dmg} damage.");
+            }
+
         }
 
         public int Leveling(int exp)
@@ -88,13 +99,13 @@ namespace GitHub_Masters__Praktika_
         public void HeavyAtackMethod(IMonster monster)
         {
             monster.GetDamage(RandomDamage() + (RandomDamage() / 2));
+
             if (monster.CurrentHealth <= 0)
-            {
-                
+            {                
                 monster.DropSomething();
                 GetExperience(monster);
-                Leveling(HeroExperience);
-            }
+                Leveling(HeroExperience);                
+            }            
         }       
 
         public void LightAtackMethod(IMonster monster)
@@ -103,7 +114,6 @@ namespace GitHub_Masters__Praktika_
                 monster.GetDamage(RandomDamage());
                 if (monster.CurrentHealth <= 0)
                 {
-
                     monster.DropSomething();
                     GetExperience(monster);
                     Leveling(HeroExperience);

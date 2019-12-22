@@ -17,7 +17,7 @@ namespace GitHub_Masters__Praktika_
         public int MaximumDamage { get; set; } = 2; //testing
         public int CriticalStrike { get; set; }
         public int CriticalStrikeDamage { get; set; }
-        public double AttackSpeed { get; set; } = 1.2; //testing
+        public double AttackSpeed { get; set; } = 4; //testing
         public int Accuracy { get; set; }
         public int ArmorPenetration { get; set; }
         public int Armor { get; set; }
@@ -36,7 +36,17 @@ namespace GitHub_Masters__Praktika_
         }       
 
         public void GetDamage(int dmg)
-        {            
+        {
+            CurrentHealth -= dmg;
+            if (CurrentHealth <= 0)
+            {
+                Console.WriteLine($"Monster died");
+            }
+            else
+            {
+                Console.WriteLine($"Monster got hit for {dmg} damage.");
+            }
+            
         }
         public void Attack(IHero hero)
         {
