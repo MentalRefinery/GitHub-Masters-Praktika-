@@ -14,23 +14,26 @@ namespace GitHub_Masters__Praktika_
         int HeroLevel { get; set; }
 
         //Herojaus patirtis
-        double HeroExperience { get; set; }
+        int HeroExperience { get; set; }
 
         ///Herojaus Spec atakos (Skills)
         ///Heavy Attack, Light Atack, Skill, Ultimate
         double HeavyAtack { get; set; }
-        double LightAttack { get; set; }
+        double LightAttack { get; set; }// Could it be attribute damage? O.o ++ Resistances
         double Skill { get; set; }
         double UltimateSkill { get; set; }
 
         ///Herojaus metodai kaip Puolimas, Specialios atakos ir t.t.
         void GetDamage(int dmg);
-        void _HeavyAtack(IMonster monster);
-        void _LightAtack(IMonster monster);
-        void _Skill(IMonster monster);
+        void HeavyAtackMethod(IMonster monster);
+        void LightAtackMethod(IMonster monster);
+
+        //Kiekviena klase tures specifini skilla.
+        void SpecialSkill(IMonster monster);
         void Ultimate(IMonster monster);
 
-        void Leveling(int heroLVL);
+        int Leveling(int exp);
+        
 
     }
 }

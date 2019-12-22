@@ -8,12 +8,36 @@ namespace GitHub_Masters__Praktika_
 {
     internal class Monster : IMonster
     {
-        //Still in development
-        public int Health { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        //Stats
+        public int ExpWorth { get; set; }
+        public int MaximumHealth { get; set; }
+        public int CurrentHealth { get; set; } = 50; //testing
+        public int ChanceToDodge { get; set; }
+        public int MinimumDamage { get; set; } = 1; //testing
+        public int MaximumDamage { get; set; } = 2; //testing
+        public int CriticalStrike { get; set; }
+        public int CriticalStrikeDamage { get; set; }
+        public double AttackSpeed { get; set; } = 1.2; //testing
+        public int Accuracy { get; set; }
+        public int ArmorPenetration { get; set; }
+        public int Armor { get; set; }
 
-        public int Strength { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Dexterity { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
+        //Attributes
+        public int Strength { get; set; }
+        public int Dexterity { get; set; }
+        public int Constitution { get; set; }
+        public int Luck { get; set; }
+        public int Mastery { get; set; }
+
+
+        public void AssignStats()
+        {           
+        }       
+
+        public void GetDamage(int dmg)
+        {            
+        }
         public void Attack(IHero hero)
         {
             hero.GetDamage(RandomDamage());
@@ -22,7 +46,17 @@ namespace GitHub_Masters__Praktika_
         private int RandomDamage()
         {
             Random rng = new Random();
-            return rng.Next();
+            return rng.Next(MinimumDamage, MaximumDamage);
         }
+        public void SpecialAttack()
+        {
+
+        }
+
+        public void DropSomething()
+        {            
+        }
+
+        
     }
 }

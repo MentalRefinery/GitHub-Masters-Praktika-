@@ -10,6 +10,18 @@ namespace GitHub_Masters__Praktika_
     {
         ///Galimi Padarų metodai ???
         ///
+        int ExpWorth { get; set; }//Custom exp prop
         void Attack(IHero hero);
+        void GetDamage(int dmg);
+
+
+        //Could be like DoT attack = Damage over time
+        //poison or burn
+        //maybe use Thread.Sleep(miliseconds)
+        void SpecialAttack();
+
+        void DropSomething();
+
+        
     }
 }
